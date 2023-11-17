@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BMI Calculator</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <h1 class="heading">BMI Calculator</h1>
+    <div class="container">
+      <form>
+        <div>
+          <label for="height"><h2>Height:</h2></label>
+          <select name="count type" id="countType">
+            <option value="cm">(Cm) Centimeter</option>
+            <option value="inche">(In) Inche</option>
+            <option value="feet">(Ft) Feet</option>
+          </select>
+          <input
+            type="number"
+            name="height"
+            id="height"
+            min="0"
+            max="1000"
+            step="0.1"
+            autocomplete="off"
+          />
+        </div>
+        <div>
+          <label for="weight"><h2>Weight:</h2></label>
+          <select name="weight type" id="weightType">
+            <option value="kg">(Kg) Kilogram</option>
+            <option value="pound">(Lb) Pound</option>
+          </select>
+          <input
+            type="number"
+            name="weight"
+            id="weight"
+            min="0"
+            max="1000"
+            step="0.1"
+            autocomplete="off"
+          />
+        </div>
+        <input type="submit" value="Get Results" />
+      </form>
+      <br />
+      <div class="card">
+        <div class="bmi">
+          <h1 id="display">00.00</h1>
+          <div class="dash">
+            <h2 class="bmi-text">BMI</h2>
+            <p id="condition" class="condition">Condition</p>
+          </div>
+        </div>
+        <div class="bold-border"></div>
+        <p class="information">Information</p>
+        <div class="color-indicators">
+          <div class="underweight"><small>Low</small></div>
+          <div class="normal"><small>Normal</small></div>
+          <div class="overweight"><small>High</small></div>
+          <div class="obese"><small>Obese</small></div>
+        </div>
+        <div class="breakpoints">
+          <sub>16</sub><sub></sub><sub>18.5</sub><sub></sub><sub></sub
+          ><sub>25.0</sub><sub></sub><sub></sub><sub>30.0</sub><sub></sub
+          ><sub>40</sub>
+        </div>
+        <small class="some-text"
+          >Measure your BMI by comparing the scale units.</small
+        >
+      </div>
+    </div>
+    <div style="text-align: center">
+      <button type="button" id="dietBtn" title="Click to View">
+        Healthy Diet &longrightarrow;
+      </button>
+      <h3 class="scroll-down">Scroll Down &darr;</h3>
+    </div>
+    <div class="diet-plans">
+      <h1>BMI Calculator</h1>
+      <h2>What is BMI?</h2>
+      <p>
+        BMI stands for Body Mass Index, which is a measure of body fat based on
+        height and weight. It is used to assess whether a person has a healthy
+        body weight for their height. BMI can also indicate the risk of certain
+        health problems, such as diabetes, heart disease, and some cancers.
+      </p>
+      <h2>How to calculate BMI?</h2>
+      <p>
+        BMI is calculated by dividing your weight in kilograms by your height in
+        meters squared. For example, if you weigh 70 kg and are 1.75 m tall,
+        your BMI is 70 / (1.75 x 1.75) = 22.9 kg/m2.<br />You can also use an
+        online BMI calculator to find out your BMI easily. Here is one example
+        of a BMI calculator1.
+      </p>
+      <h2>What are the BMI categories?</h2>
+      <b
+        >According to the World Health Organization (WHO), there are five main
+        BMI categories for adults:</b
+      >
+      <ul>
+        <li>Underweight: BMI below 18.5 kg/m2</li>
+        <li>Normal weight: BMI between 18.5 and 24.9 kg/m2</li>
+        <li>Overweight: BMI between 25 and 29.9 kg/m2</li>
+        <li>Obese: BMI above 30 kg/m2</li>
+      </ul>
+      <p>
+        These categories may vary depending on factors such as age, sex,
+        ethnicity, and muscle mass.
+      </p>
+      <h1>Perfect Plane Diet:</h1>
+
+      <h2>What is the perfect plane diet?</h2>
+      <p>
+        The perfect plane diet is a diet that helps you maintain or achieve a
+        healthy BMI while traveling by plane. Traveling by plane can be
+        stressful and disruptive for your normal eating habits, especially if
+        you cross different time zones or have long flights. You may experience
+        jet lag, dehydration, bloating, constipation, or cravings for unhealthy
+        foods.
+      </p>
+      <br />
+      <b
+        >To avoid these problems and keep your weight in check, you should
+        follow some simple tips for your plane diet:</b
+      >
+      <p>
+        Drink plenty of water before, during, and after your flight. Water helps
+        you stay hydrated, flush out toxins, and prevent overeating. Avoid
+        alcohol, caffeine, and sugary drinks on the plane. These beverages can
+        dehydrate you, disrupt your sleep cycle, and increase your appetite.
+        Choose healthy snacks and meals on the plane or bring your own. Opt for
+        foods that are high in protein, fiber, and healthy fats, such as nuts,
+        seeds, fruits, vegetables, yogurt, cheese, eggs, or lean meat. Avoid
+        foods that are high in salt, sugar, or fat, such as chips, cookies,
+        candy, or fried foods. Eat according to your destinations time zone.
+        This can help you adjust to the new time zone faster and avoid jet lag.
+      </p>
+      <br />
+      <p>
+        <strong>For example:</strong>
+        If you are flying from New York to London, you should have breakfast
+        when it is morning in London, even if it is still night in New York.
+        Move around on the plane as much as possible. Sitting for long periods
+        can slow down your metabolism and cause blood clots. Try to get up and
+        walk around every hour or do some stretches in your seat. By following
+        these tips, you can enjoy your plane trip without compromising your
+        health or weight goals.
+      </p>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
