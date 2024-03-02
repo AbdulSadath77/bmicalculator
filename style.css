@@ -271,15 +271,16 @@ input[type="submit"] {
 #dietBtn:hover {
   border: 3px solid rgb(117, 117, 117);
 }
-.scroll-down {
+
+.hidden {
   display: none;
 }
+
 .diet-plans {
   width: clamp(280px, 100%, 1028px);
   height: fit-content;
   padding: 4%;
   margin: auto;
-  display: none;
 }
 .diet-plans > h1 {
   font-size: 3rem;
