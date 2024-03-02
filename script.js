@@ -1,5 +1,4 @@
 const form = document.querySelector("form");
-
 form.addEventListener("submit", (e) => {
   e.preventDefault();
   let countType = document.getElementById("countType").value;
@@ -7,14 +6,12 @@ form.addEventListener("submit", (e) => {
   let height = +document.querySelector("#height").value;
   let weight = +document.querySelector("#weight").value;
   let display = document.getElementById("display");
-
   if (height <= 0 || weight <= 0 || isNaN(height) || isNaN(weight)) {
     alert(
       ` Invalid input : [ ${countType} = ${height} ] and [ ${weightType} = ${weight} ]`
     );
     return;
   }
-
   if (countType == "cm") {
     height /= 100;
   } else if (countType == "inche") {
@@ -25,11 +22,8 @@ form.addEventListener("submit", (e) => {
     height *= 2.54;
     height /= 100;
   }
-
   if (weightType == "pound") weight *= 2.20462262185;
-
   let bmi = weight / (height * height);
-
   let condition = document.getElementById("condition");
   if (bmi < 18.5) {
     condition.innerHTML = "Low Weight";
@@ -47,15 +41,16 @@ form.addEventListener("submit", (e) => {
     condition.innerHTML = "Obese";
     condition.style.color = "rgb(255, 50, 50)";
   }
-
-  display.innerHTML = `${bmi.toFixed(2)}`;
+  display.innerHTML = `$ {
+        bmi.toFixed(2)
+    }`;
 });
-
 const dietBtn = document.getElementById("dietBtn");
 dietBtn.addEventListener("click", () => {
+  console.log("this is just simple");
   dietBtn.innerHTML = "Healthy Diet";
   const dietPlans = document.querySelector(".diet-plans");
   const scrDown = document.querySelector(".scroll-down");
-  scrDown.style.display = "block";
-  dietPlans.style.display = "block";
+  scrDown.classList.toggle('hidden');
+  dietPlans.classList.toggle('hidden');
 });
