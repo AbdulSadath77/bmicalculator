@@ -41,13 +41,10 @@ form.addEventListener("submit", (e) => {
     condition.innerHTML = "Obese";
     condition.style.color = "rgb(255, 50, 50)";
   }
-  display.innerHTML = `$ {
-        bmi.toFixed(2)
-    }`;
+  display.innerHTML = `${bmi.toFixed(2)}`;
 });
 const dietBtn = document.getElementById("dietBtn");
 dietBtn.addEventListener("click", () => {
-  console.log("this is just simple");
   dietBtn.innerHTML = "Healthy Diet";
   const dietPlans = document.querySelector(".diet-plans");
   const scrDown = document.querySelector(".scroll-down");
